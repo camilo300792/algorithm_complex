@@ -1,4 +1,17 @@
-import tyme
+import time
+
+def factorial(n):
+    result = 1
+    while n > 1:
+        result *= n
+        n -= 1
+    return result
+
+def factorial_r(n):
+    if n == 1:
+        return 1
+    return n * factorial_r(n - 1)
+
 
 if __name__ == '__main__':
 
