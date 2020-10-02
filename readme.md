@@ -70,7 +70,7 @@ Dejando de lado el lenguaje de programación, el hardware u otros factores exter
 
 > No es lo mismo ejecutar una función en *python* que una en *C* o ejecutarla en un equipo con procesador Celeron que en uno con procesador Xeon.
 
-Podemos contar cuantos procesos realizan nuestros algorítmos por ejemplo:
+Podemos contar cuantos procesos realizan nuestros algorítmos. Por ejemplo:
 
 En nuestro primer caso vemos que el proceso *f1* recibe un número e itera esa cantidad de veces para imprimir el resultado de una operación con el indice actual... Tenemos *n* pasos para ejecutar una intrucción *"El módulo dos del paso para saber si es un número primo"*. 
 El resultado es (n + 1)
@@ -78,8 +78,8 @@ El resultado es (n + 1)
 A diferencia del proceso *f1* el proceso *f2* no tiene instrucciones iterativas y aunque depende de *numero* para operar, el número de ejecuciones no va a crecer conforme el input se haga más grande. Entonces si el input es mil nuestro proceso solo se ejecuta una vez y retorna el cuadrado de la entrada. 
 El resultado es (1)
 
-Por último pero no menos importante tenemos nuestro proceso *f3* que como podemos notar depende de nuestro input *numero*, pero con la particularidad de que tiene un ciclo dentro de otro, esto multiplica la cantidad de veces que se ejcuta nuestro algorítmo en cada iteración y como tenemos dos ciclos que dependen del input más una operación interna. 
-El resultado es (n * n + 1) o (n**2 + 1)
+Por último pero no menos importante tenemos nuestro proceso *f3* que como podemos notar depende de nuestro input *numero*, pero con la particularidad de que tiene un ciclo dentro de otro, esto multiplica la cantidad de veces que se ejecuta nuestro algorítmo en cada iteración y como tenemos dos ciclos que dependen del input más una operación interna. 
+El resultado es (n * n + 1) o (n^2 + 1)
 
 Con esto en mente podemos empezar a hablar de complejidad algorítmica...
 
@@ -90,6 +90,11 @@ Entender de complejidad algorítmica nos permite evaluar como se comporta un alg
 *Big O* Nos permite descartar los terminos menos significativos para enfoncarnos en el tiempo de ejecución y su tasa de crecimiento. 
 En teoría, ya hemos visto un poco de esto con los ejemplos anteriores y si tomamos como referencia el primero de ellos vemos que nuestro resultado fue *(n + 1)*. 
 
-> Pero... *Big O* no nos permite descartar terminos menos significativos eso que quiere decir. 
+> Pero... *Big O* nos permite descartar terminos menos significativos. :confused: eso que quiere decir. 
  
-Esto nos indica que podemos descartar aquello que no influye en como crece el tiempo de ejecución de nuestro algorítmo. Entonces, si analizamos *(n + 1)* podríamos descartar el ***1*** y quedarnos con la ***n*** ya que a medida que sea más grande más tiempo le tomará a nuestro algorítmo terminar. Entonces el *Big O* de *f1* es *O(n)*
+Esto nos indica que podemos descartar aquello que no influye en como crece el tiempo de ejecución de nuestro algorítmo. Entonces, si analizamos *(n + 1)* podríamos descartar el ***1*** y quedarnos con la ***n*** ya que a medida que sea más grande, más tiempo le tomará a nuestro algorítmo terminar. Entonces el *Big O* de *f1* es *O(n)*.
+Si me has seguido hasta acá entonces serás capaz de entender porque el *Big O* de *f2* es *O(1)* y el de *f3* es *O(n^2)*. Sino, te lo explicaré rápidamente: 
+
+* *f2* es *O(1)* porque no tenemos que descatar ya que solo operamos una vez, osea tenemos el mejor performance posible para nuestro algoritmo porque es constante no importa cuán grande sea el input siempre se tardara lo mismo en procesarlo.
+
+* *f3* es *O(n^2)* porque al igual que en el primer ejemplo descartamos terminos menos significativos y nos quedamos con *(n * n)* o *ene al cuadrado*.
