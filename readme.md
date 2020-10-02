@@ -78,5 +78,18 @@ El resultado es (n + 1)
 A diferencia del proceso *f1* el proceso *f2* no tiene instrucciones iterativas y aunque depende de *numero* para operar, el número de ejecuciones no va a crecer conforme el input se haga más grande. Entonces si el input es mil nuestro proceso solo se ejecuta una vez y retorna el cuadrado de la entrada. 
 El resultado es (1)
 
-Por último pero no menos importante tenemos nuestro proceso *f3* que como podemos notar depende de nuestro input *numero*, pero con la particularidad de que tiene un ciclo dentro de otro, esto multiplica la cantidad de veces que se ejcuta nuestro algoritmo en cada iteración y como tenemos dos ciclos que dependen del input más una operación interna. 
+Por último pero no menos importante tenemos nuestro proceso *f3* que como podemos notar depende de nuestro input *numero*, pero con la particularidad de que tiene un ciclo dentro de otro, esto multiplica la cantidad de veces que se ejcuta nuestro algorítmo en cada iteración y como tenemos dos ciclos que dependen del input más una operación interna. 
 El resultado es (n * n + 1) o (n**2 + 1)
+
+Con esto en mente podemos empezar a hablar de complejidad algorítmica...
+
+![](https://i.ytimg.com/vi/ONNTDstfzsg/sddefault.jpg)
+
+Entender de complejidad algorítmica nos permite evaluar como se comporta un algorítmo en función al tamaño de su entrada y cuál es la tasa de crecimiento conforme se acerca al infinito. A esto se le conoce como notación asintótica. Una de ellas es *Big O Notation* o *notación de (O) grande*.
+
+*Big O* Nos permite descartar los terminos menos significativos para enfoncarnos en el tiempo de ejecución y su tasa de crecimiento. 
+En teoría, ya hemos visto un poco de esto con los ejemplos anteriores y si tomamos como referencia el primero de ellos vemos que nuestro resultado fue *(n + 1)*. 
+
+> Pero... *Big O* no nos permite descartar terminos menos significativos eso que quiere decir. 
+ 
+Esto nos indica que podemos descartar aquello que no influye en como crece el tiempo de ejecución de nuestro algorítmo. Entonces, si analizamos *(n + 1)* podríamos descartar el ***1*** y quedarnos con la ***n*** ya que a medida que sea más grande más tiempo le tomará a nuestro algorítmo terminar. Entonces el *Big O* de *f1* es *O(n)*
