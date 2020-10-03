@@ -129,3 +129,21 @@ Y el caso promedio es como deducir que lo encuentro a la mitad del camino (n / 2
 Entonces puedo decir que en el mejor de los casos mi busqueda es *O(1)*, promedio y peor de los casos  siguen siendo *O(n)*
 
 Es importante aclarar que el ***Big O*** de nuestro algoritmo se mide siempre basado en el peor de los casos... Veamos un ejemplo más.
+
+```ptyhon
+def binary_serach(needle, haystack):
+    left = 0
+    right = len(haystack) - 1
+    while (right >= left):
+        index = (left + right) // 2
+        if haystack[index] == needle:
+            return index
+        elif haystack[index] < needle:
+            left = index + 1
+        else:
+            right = index - 1
+    return -1
+```
+
+La busqueda binaria es quiza el mejor algoritmo de búsqueda que existe en la actualidad ... Pero como a superman la criptonita, para la búsqueda binaria tenemos que tener un arreglo ordenado.
+El *big O* de una busqueda binaria en O(log n) y es porque a medida que nuestro input se hace más grande el número la tasa de crecimiento tiende a aplanace...
