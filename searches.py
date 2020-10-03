@@ -1,4 +1,9 @@
 
+def linear_search(needle, haystack):
+    for key, value in enumerate(haystack):
+        if value == needle:
+            return key    
+    return -1
 
 if __name__ == '__main__':
 
@@ -6,4 +11,9 @@ if __name__ == '__main__':
 
     numbers = [i for i in range(3, 90) if i % 2 == 1]
     
-    linear_search(needle=target, haystack=numbers)
+    result = linear_search(needle=target, haystack=numbers)
+
+    if (result > -1):
+        print('Number founded in %d position' % (result))
+    else:
+        print('Number not found')
