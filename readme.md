@@ -130,7 +130,7 @@ Entonces puedo decir que en el mejor de los casos mi busqueda es *O(1)*, promedi
 
 Es importante aclarar que el ***Big O*** de nuestro algoritmo se mide siempre basado en el peor de los casos... Veamos un ejemplo más.
 
-```ptyhon
+```python
 def binary_serach(needle, haystack):
     left = 0
     right = len(haystack) - 1
