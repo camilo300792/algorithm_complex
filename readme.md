@@ -102,3 +102,28 @@ Si me has seguido hasta acá entonces serás capaz de entender porque el *Big O*
 Además debemos tener en cuenta que con *big O* analizamos tres posibles casos el mejor de los casos, el caso promedio y el peor de los casos.
 
 Veamos el siguiente ejemplo:
+
+```python
+def linear_search(needle, haystack):
+    for key, value in enumerate(haystack):
+        if value == needle:
+            return key    
+    return -1
+
+if __name__ == '__main__':
+
+    target = int(input('Find your number: '))
+
+    numbers = [i for i in range(3, 90) if i % 2 == 1]
+    
+    result = linear_search(needle=target, haystack=numbers)
+
+    if (result > -1):
+        print('Number founded in %d position' % (result))
+    else:
+        print('Number not found')
+```
+
+En el mejor de los casos encontré el número en primer indice del arreglo no realicé más operaciones y todo muy bien... En el peor de los casos encontré el elemento en la ultima posición del array o no lo encontré, sin embargo tube que recorerlo todo, uno a uno, para verificar si estaba el elemento.
+Y el caso promedio es como deducir que lo encuentro a la mitad del camino (n / 2).
+Entonces puedo decir que en el mejor de los casos mi busqueda es *O(1)*, promedio y peor de los casos  siguen siendo *O(n)*
