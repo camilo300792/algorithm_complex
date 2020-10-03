@@ -127,3 +127,5 @@ if __name__ == '__main__':
 En el mejor de los casos encontré el número en primer indice del arreglo no realicé más operaciones y todo muy bien... En el peor de los casos encontré el elemento en la ultima posición del array o no lo encontré, sin embargo tube que recorerlo todo, uno a uno, para verificar si estaba el elemento.
 Y el caso promedio es como deducir que lo encuentro a la mitad del camino (n / 2).
 Entonces puedo decir que en el mejor de los casos mi busqueda es *O(1)*, promedio y peor de los casos  siguen siendo *O(n)*
+
+Es importante aclarar que el ***Big O*** de nuestro algoritmo se mide siempre basado en el peor de los casos... Veamos un ejemplo más.
