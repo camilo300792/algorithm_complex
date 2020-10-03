@@ -95,6 +95,10 @@ En teoría, ya hemos visto un poco de esto con los ejemplos anteriores y si toma
 Esto nos indica que podemos descartar aquello que no influye en como crece el tiempo de ejecución de nuestro algorítmo. Entonces, si analizamos *(n + 1)* podríamos descartar el ***1*** y quedarnos con la ***n*** ya que a medida que sea más grande, más tiempo le tomará a nuestro algorítmo terminar. Entonces el *Big O* de *f1* es *O(n)*.
 Si me has seguido hasta acá entonces serás capaz de entender porque el *Big O* de *f2* es *O(1)* y el de *f3* es *O(n^2)*. Sino, te lo explicaré rápidamente: 
 
-* *f2* es *O(1)* porque no tenemos que descatar ya que solo operamos una vez, osea tenemos el mejor performance posible para nuestro algoritmo porque es constante no importa cuán grande sea el input siempre se tardara lo mismo en procesarlo.
+* *f2* es *O(1)* porque no tenemos que descatar nada, ya que solo operamos una vez, osea tenemos el mejor performance posible para nuestro algoritmo porque es constante y no importa cuán grande sea el input siempre se tardara lo mismo en procesarlo.
 
 * *f3* es *O(n^2)* porque al igual que en el primer ejemplo descartamos terminos menos significativos y nos quedamos con *(n * n)* o *ene al cuadrado*.
+
+Además debemos tener en cuenta que con *big O* analizamos tres posibles casos el mejor de los casos, el caso promedio y el peor de los casos.
+
+Veamos el siguiente ejemplo:
