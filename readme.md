@@ -124,11 +124,11 @@ if __name__ == '__main__':
         print('Number not found')
 ```
 
-En el mejor de los casos encontré el número en primer indice del arreglo no realicé más operaciones y todo muy bien... En el peor de los casos encontré el elemento en la ultima posición del array o no lo encontré, sin embargo tube que recorerlo todo, uno a uno, para verificar si estaba el elemento.
-Y el caso promedio es como deducir que lo encuentro a la mitad del camino (n / 2).
-Entonces puedo decir que en el mejor de los casos mi busqueda es *O(1)*, promedio y peor de los casos  siguen siendo *O(n)*
+En el mejor de los casos encontramos el número en el primer indice del arreglo, no realizamos más operaciones y todo muy bien... En el peor de los casos encontramos el elemento en la ultima posición del array o no lo encontramos, sin embargo tuvimos que recorerlo todo, uno a uno, para verificar si estaba el elemento.
+Y el caso promedio es como deducir que lo encuentramos a la mitad del camino (n / 2).
+Entonces podemos decir que en el mejor de los casos mi busqueda es *O(1)*, promedio y peor de los casos  siguen siendo *O(n)*
 
-Es importante aclarar que el ***Big O*** de nuestro algoritmo se mide siempre basado en el peor de los casos... Veamos un ejemplo más.
+Es importante aclarar que el ***Big O*** de nuestro algorítmo se mide siempre basado en el peor de los casos... Veamos un ejemplo más.
 
 ```python
 def binary_serach(needle, haystack):
@@ -145,5 +145,5 @@ def binary_serach(needle, haystack):
     return -1
 ```
 
-La busqueda binaria es quiza el mejor algoritmo de búsqueda que existe en la actualidad ... Pero como a superman la criptonita, para la búsqueda binaria tenemos que tener un arreglo ordenado.
-El *big O* de una busqueda binaria en O(log n) y es porque a medida que nuestro input se hace más grande el número la tasa de crecimiento tiende a aplanace...
+La búsqueda binaria es quiza el mejor algorítmo de búsqueda que existe en la actualidad ... Pero como a superman la kryptonita, para la búsqueda binaria tenemos que tener un arreglo ordenado.
+Su *big O* es O(log n) porque a medida que nuestro input se hace más grande el número la tasa de crecimiento tiende a aplanarce...
